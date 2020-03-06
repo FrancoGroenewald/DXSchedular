@@ -1,0 +1,14 @@
+<dx-scheduler
+    [dataSource]="appointmentsData"
+    [views]='["week", "month"]'
+    currentView="week"
+    [currentDate]="currentDate"
+    [startDayHour]="9"
+    [height]="600">
+    <dxi-resource
+        fieldExpr="priorityId"
+        [allowMultiple]="false"
+        [dataSource]="priorityData"
+        label="Priority">
+    </dxi-resource>
+</dx-scheduler>

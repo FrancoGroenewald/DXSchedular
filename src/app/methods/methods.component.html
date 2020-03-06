@@ -1,0 +1,24 @@
+<dx-scheduler
+    [dataSource]="appointmentsData"
+    [views]='["week", "month"]'
+    currentView="week"
+    [currentDate]="currentDate"
+    [startDayHour]="9"
+    [height]="600"
+    (onAppointmentAdding)="onAppointmentAdded($event)"
+    (onAppointmentUpdating)="onAppointmentUpdating($event)"
+    (onAppointmentDeleted)="onAppointmentDeleted($event)">
+</dx-scheduler>
+<div *ngIf="showAd">
+    Appointment Data: {{display.appointmentData | json}}
+</div>
+<div *ngIf="showUp">
+    Old Data: {{display.oldData | json}}
+    <br>
+    New Data: {{display.newData | json}}
+</div>
+<div *ngIf="showDe">
+    Appointment Data: {{display.appointmentData | json}}
+</div>
+
+
